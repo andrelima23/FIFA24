@@ -18,52 +18,80 @@ body {
 
 
 .menu {
+    width: inherit;
     display: flex;
     flex-direction: row;
-    padding: 5px;
+    padding: 10px;
     align-items: center;
+    justify-content: space-between;
 }
 
-.menu button {
-    width: auto;
-    height: 3em;
+.menu a {
     font-family: "Red Hat Display", sans-serif;
     font-size: 10pt;
     margin: 0 10px;
     font-weight: 600;
-    border-radius: 4px;
-    background-color: #381d1d00;
     color: white;
     border-style: none;
     text-align: center;
+    text-decoration: none;
 }
 
-.menu button:hover {
+.menu a:hover {
     background-color: #86868600;
-    color: red;
+    color: rgb(209, 51, 51);
 }
 
 .menu #title {
-    color: rgb(255, 12, 12);
+    width: max-content;
+    color: rgb(115, 34, 197);
     font-family: "Archivo Black", sans-serif;
-    margin: 0 50px 0 10px;
-    flex: 1;
+    margin: 10px 50px 10px 10px;
 }
+
 
 .table {
     display: flex;
+    height: 80%;
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    height: auto;
     align-items: center;
+    justify-content: center;
 }
 
+.table2 {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.table2 img#first.player-pic,
+.table2 img#second.player-pic,
+.table2 img#third.player-pic {
+    border: 2px solid grey;
+}
+
+
+
 hr {
-    width: 400px;
+    width: 80%;
     color: rgba(112, 112, 112, 0.199);
 }
+
+.container #hl {
+    font-family: "Poppins", sans-serif;
+    font-size: small;
+    text-decoration: none;
+    margin-left: 50px;
+}
 .top-table {
-    height: 80px;
-    width: 90%;
+    height: 70px;
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 2fr 1.5fr;
     grid-template-areas: "pos player-name trophy";
@@ -77,29 +105,47 @@ hr {
     margin-bottom: 10px;
 }
 
+.table-title {
+    width: 80%;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+    font-weight: 300;
+    
+}
+
 #position {
     grid-area: pos;
 }
 
-#player-pos {
+.player-pos {
     grid-area: player-pos;
 }
 
-#player-pic {
+.player-pic  {
     grid-area: player-pic;
 }
 
-#player-name {
+img#first{
+    border: 2px solid rgba(30, 190, 8, 0.842);
+}
+
+img#second{
+    border: 2px solid rgb(55, 24, 228);
+}
+
+img#third{
+    border: 2px solid rgb(207, 11, 11);
+}
+
+.player-name {
     grid-area: player-name;
 }
 
-#player-trophy {
+.player-trophy {
     grid-area: player-trophy;
 }
 
-#player-name {
-    grid-area: player-name;
-}
 
 #trophy {
     grid-area: trophy;
@@ -108,13 +154,13 @@ hr {
 .top-table h2 {
     margin: 0 0px;
     text-align: center;
-    font-size: 16pt;
+    font-size: 14pt;
     color: #9b9b9b;
 }
 
 
 .player {
-    width: 80%;
+    width: 70%;
     height: 80px;
     display: grid;
     flex-direction: row;
@@ -128,8 +174,8 @@ hr {
 .player img {
     height: 48px;
     border-radius: 50%;
-    border: 1px solid red;
-    margin-right: 45px;
+    margin-right: 20px;
+    margin-left: 10px;
 }
 
 .player h2 {
@@ -137,7 +183,7 @@ hr {
     font-family: "Roboto", sans-serif;
     text-transform: capitalize;
     font-weight: 400;
-    font-size: 14pt;
+    font-size: 12pt;
     text-align: center;
 }
 
@@ -157,9 +203,6 @@ hr {
         height: 100dvh;
     }
 
-    hr {
-        width: 90%;
-    }
     
     .container {
         width: 100%;
@@ -171,14 +214,19 @@ hr {
         color: rgb(115, 34, 197);
     }
 
-    .menu button {
+    .menu a {
         font-size: 8pt;
         text-transform: capitalize;
     }
 
     .top-table h2 {
-        font-size: 14pt;
+        font-size: 12pt;
         
+    }
+
+    hr {
+        width: 80%;
+        color: rgba(112, 112, 112, 0.144);
     }
 
     .player h2 {
@@ -188,12 +236,13 @@ hr {
 
     .player h2:nth-child(3) {
         text-align: start;
+        margin-left: 5px;
     }
 
     .player img {
         width: 48px;
         height: 48px;
-        margin-left: 10px;
-        margin-right: 15px;
+        margin-left: 5px;
+        margin-right: 10px;
     }
 }
