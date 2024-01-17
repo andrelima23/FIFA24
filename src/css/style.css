@@ -50,17 +50,9 @@ body {
 }
 
 
-.table {
-    display: flex;
-    height: 80%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.table2 {
+.table,
+.table2,
+.table3 {
     display: flex;
     height: 80%;
     width: 100%;
@@ -93,7 +85,7 @@ hr {
     height: 70px;
     width: 80%;
     display: grid;
-    grid-template-columns: 1fr 2fr 1.5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "pos player-name trophy";
     flex-direction: row;
     justify-content: space-evenly;
@@ -124,6 +116,8 @@ hr {
 
 .player-pic  {
     grid-area: player-pic;
+    position: relative;
+    left: -10%;
 }
 
 img#first{
@@ -140,6 +134,8 @@ img#third{
 
 .player-name {
     grid-area: player-name;
+    position: relative;
+    left: -30%;
 }
 
 .player-trophy {
@@ -167,15 +163,13 @@ img#third{
     justify-content: center;
     align-items: center;
     display: grid;
-    grid-template-columns: 0.5fr 0.5fr 1.5fr 0.9fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "player-pos player-pic player-name player-trophy ";
 }
 
 .player img {
     height: 48px;
     border-radius: 50%;
-    margin-right: 20px;
-    margin-left: 10px;
 }
 
 .player h2 {
@@ -183,7 +177,7 @@ img#third{
     font-family: "Roboto", sans-serif;
     text-transform: capitalize;
     font-weight: 400;
-    font-size: 12pt;
+    font-size: 14pt;
     text-align: center;
 }
 
@@ -203,10 +197,27 @@ img#third{
         height: 100dvh;
     }
 
+    .player-pic  {
+        position: relative;
+        left: -20%;
+    }
+
+    .player-name {
+        position: relative;
+        left: -35%;
+    }
     
     .container {
         width: 100%;
         height: 100svh;
+    }
+
+    .top-table {
+        width: 90%;
+    }
+
+    .player {
+        width: 80%;
     }
 
     .menu #title {
