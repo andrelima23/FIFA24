@@ -1,25 +1,35 @@
-const player = document.querySelector(".table")
-const player2 = document.querySelector(".table2")
-const scorer = document.querySelector(".table3")
+const playerTable = document.querySelector(".table")
+const playerTable2 = document.querySelector(".table2")
+const playerTable3 = document.querySelector(".table3")
+const playerTable4 = document.querySelector(".table4")
+const playerTable5 = document.querySelector(".table5")
+const scorer = document.querySelector(".table4")
+
 
 const players = {
     andre: {
         pic: "./src/images/andre.webp",
         name: "André",
-        trophy: 11,
-        losers: 4
+        trophies: 11,
+        lastTrophies: 63,
+        losers: 3,
+        lastLosers: 18
     },
     marcio: {
         pic: "./src/images/marcio.webp",
         name: "Márcio",
-        trophy: 7,
-        losers: 56
+        trophies: 4,
+        lastTrophies: 23,
+        losers: 10,
+        lastLosers: 42
     },
     junior: {
         pic: "./src/images/junior.webp",
         name: "Júnior",
-        trophy: 9,
-        losers: 4
+        trophies: 4,
+        lastTrophies: 25,
+        losers: 6,
+        lastLosers: 51
     },
 }
 
@@ -27,17 +37,17 @@ const scorers = {
     mbappe: {
         pic: 'https://fifastatic.fifaindex.com/FIFA24/players/231747.png',
         name: "Mbappé",
-        goals: 9
+        goals: 6
     }, 
     vlahovic: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/246430.png",
         name: "Vlahović",
-        goals: 3
+        goals: 2
     },
     salah: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/209331.png",
         name: "Salah",
-        goals: 1
+        goals: 2
     },
     haller: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/205693.png",
@@ -47,7 +57,7 @@ const scorers = {
     sancho: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/233049.png",
         name: "Sancho",
-        goals: 9
+        goals: 2
     }
 }
 
@@ -59,7 +69,17 @@ function createPlayerChampion(player, position, id) {
             <h2 class="player-pos" id= ${id}>${position}</h2>
             <img class="player-pic" id= ${id} src="${player.pic}" alt="player" >
             <h2 class="player-name" id= ${id} >${player.name}</h2>
-            <h2 class="player-trophy" id= ${id} >${player.trophy}</h2>
+            <h2 class="player-trophies" id= ${id} >${player.trophies}</h2>
+            `
+}
+
+function createPlayerChampionLastCup(player, position, id) {
+
+    return `
+            <h2 class="player-pos" id= ${id}>${position}</h2>
+            <img class="player-pic" id= ${id} src="${player.pic}" alt="player" >
+            <h2 class="player-name" id= ${id} >${player.name}</h2>
+            <h2 class="player-trophies" id= ${id} >${player.lastTrophies}</h2>
             `
 }
 
@@ -69,7 +89,17 @@ function createPlayerLoser(player, position, id) {
             <h2 class="player-pos" id= ${id}>${position}</h2>
             <img class="player-pic" id= ${id} src="${player.pic}" alt="player" >
             <h2 class="player-name" id= ${id} >${player.name}</h2>
-            <h2 class="player-trophy" id= ${id} >${player.losers}</h2>
+            <h2 class="player-trophies" id= ${id} >${player.losers}</h2>
+            `
+}
+
+function createPlayerLastLoser(player, position, id) {
+
+    return `
+            <h2 class="player-pos" id= ${id}>${position}</h2>
+            <img class="player-pic" id= ${id} src="${player.pic}" alt="player" >
+            <h2 class="player-name" id= ${id} >${player.name}</h2>
+            <h2 class="player-trophies" id= ${id} >${player.lastLosers}</h2>
             `
 }
 
@@ -79,8 +109,109 @@ function createScorers(scorer, position, id) {
             <h2 class="player-pos" id= ${id}>${position}</h2>
             <img class="player-pic" id= ${id} src="${scorer.pic}" alt="scorer" >
             <h2 class="player-name" id= ${id} >${scorer.name}</h2>
-            <h2 class="player-trophy" id= ${id} >${scorer.goals}</h2>
+            <h2 class="player-trophies" id= ${id} >${scorer.goals}</h2>
             `
+}
+
+
+function createChampionsTable() {
+    let sortedPlayers = [ players.andre, players.junior, players.marcio ];
+
+    sortedPlayers.sort( (a, b) => {
+        if(b.trophies !== a.trophies) {
+            return b.trophies - a.trophies
+        }
+    })
+
+    sortedPlayers.map( (player, index) => {
+        let div = document.createElement("div");
+        let position = index + 1;
+        let id = index == 0 ? "first" : index == 1 ? "second" : "third"
+
+        div.className = "player"
+        div.innerHTML = createPlayerChampion(player, position, id)
+        playerTable?.append(div)
+    })
+}
+
+function createLastChampionsTable() {
+    let sortedPlayers = [ players.andre, players.junior, players.marcio ];
+
+    sortedPlayers.sort( (a, b) => {
+        if(b.lastTrophies !== a.lastTrophies) {
+            return b.lastTrophies - a.lastTrophies
+        }
+    })
+
+    sortedPlayers.map( (player, index) => {
+        let div = document.createElement("div");
+        let position = index + 1;
+        let id = index == 0 ? "first" : index == 1 ? "second" : "third"
+
+        div.className = "player"
+        div.innerHTML = createPlayerChampionLastCup(player, position, id)
+        playerTable2?.append(div)
+    })
+}
+
+function createLoserTable() {
+    let sortedPlayers = [ players.andre, players.junior, players.marcio ];
+
+    sortedPlayers.sort( (a, b) => {
+        if(b.losers !== a.losers) {
+            return b.losers - a.losers
+        }
+    })
+
+    sortedPlayers.map( (player, index) => {
+        let div = document.createElement("div");
+        let position = index + 1;
+        let id = index == 0 ? "first" : index == 1 ? "second" : "third"
+
+        div.className = "player"
+        div.innerHTML = createPlayerLoser(player, position, id)
+        playerTable3?.append(div)
+    })
+}
+
+function createLastLoserTable() {
+    let sortedPlayers = [ players.andre, players.junior, players.marcio ];
+
+    sortedPlayers.sort( (a, b) => {
+        if(b.lastLosers !== a.lastLosers) {
+            return b.lastLosers - a.lastLosers
+        }
+    })
+
+    sortedPlayers.map( (player, index) => {
+        let div = document.createElement("div");
+        let position = index + 1;
+        let id = index == 0 ? "first" : index == 1 ? "second" : "third"
+
+        div.className = "player"
+        div.innerHTML = createPlayerLastLoser(player, position, id)
+        playerTable4?.append(div)
+    })
+}
+
+function createScorerTable() {
+    let sortedScorers = [ scorers.haller, scorers.mbappe, scorers.salah, scorers.sancho, scorers.vlahovic ];
+
+    sortedScorers.sort( (a, b) => {
+        if(b.goals !== a.goals) {
+            return b.goals - a.goals
+        }
+    })
+
+    sortedScorers.map( (player, index) => {
+        let div = document.createElement("div");
+        let position = index + 1;
+        let id = index == 0 ? "first" : "second" 
+
+        div.className = "player"
+        div.innerHTML = createScorers(player, position, id)
+        playerTable5?.append(div)
+    })
 }
 
 function createTable() {
@@ -108,8 +239,8 @@ function createTable() {
     let sortedScorers = [ scorers.mbappe, scorers.haller, scorers.salah, scorers.sancho, scorers.vlahovic ]
 
     sortedPlayers.sort( (a, b) => {
-        if(b.trophy !== a.trophy) {
-            return b.trophy - a.trophy
+        if(b.trophies !== a.trophies) {
+            return b.trophies - a.trophies
         }
     })
 
@@ -155,5 +286,10 @@ function createTable() {
 }
 
 
-createTable()
+// createTable()
 
+createChampionsTable()
+createLastChampionsTable()
+createLoserTable()
+createLastLoserTable()
+createScorerTable()
