@@ -10,17 +10,17 @@ const players = {
     andre: {
         pic: "./src/images/andre.webp",
         name: "André",
-        trophies: 11,
+        trophies: 26,
         lastTrophies: 63,
-        losers: 3,
+        losers: 4,
         lastLosers: 18
     },
     marcio: {
         pic: "./src/images/marcio.webp",
         name: "Márcio",
-        trophies: 4,
+        trophies: 9,
         lastTrophies: 23,
-        losers: 10,
+        losers: 17,
         lastLosers: 42
     },
     junior: {
