@@ -37,22 +37,22 @@ const scorers = {
     mbappe: {
         pic: 'https://fifastatic.fifaindex.com/FIFA24/players/231747.png',
         name: "Mbappé",
-        goals: 6
+        goals: 12
     }, 
     vlahovic: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/246430.png",
         name: "Vlahović",
-        goals: 2
+        goals: 6
     },
     salah: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/209331.png",
         name: "Salah",
-        goals: 2
+        goals: 5
     },
     haller: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/205693.png",
         name: "Haller",
-        goals: 2
+        goals: 5
     },
     sancho: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/233049.png",
