@@ -58,6 +58,16 @@ const scorers = {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/233049.png",
         name: "Sancho",
         goals: 2
+    },
+    kean: {
+        pic: "https://fifastatic.fifaindex.com/FIFA24/players/236610.png",
+        name: "Kean",
+        goals: 6
+    },
+    diaz: {
+        pic: "https://fifastatic.fifaindex.com/FIFA24/players/241084.png",
+        name: "Luis Díaz",
+        goals: 4
     }
 }
 
@@ -195,8 +205,11 @@ function createLastLoserTable() {
 }
 
 function createScorerTable() {
-    let sortedScorers = [ scorers.haller, scorers.mbappe, scorers.salah, scorers.sancho, scorers.vlahovic ];
-
+    let keys = Object.keys(scorers)
+    let sortedScorers = [];
+    for(key of keys) {
+        sortedScorers.push(scorers[key])
+    }
     sortedScorers.sort( (a, b) => {
         if(b.goals !== a.goals) {
             return b.goals - a.goals
@@ -204,6 +217,9 @@ function createScorerTable() {
     })
 
     sortedScorers.map( (player, index) => {
+        if(index > 4) {
+            return
+        }
         let div = document.createElement("div");
         let position = index + 1;
         let id = index == 0 ? "first" : "second" 
@@ -211,6 +227,8 @@ function createScorerTable() {
         div.className = "player"
         div.innerHTML = createScorers(player, position, id)
         playerTable5?.append(div)
+
+        
     })
 }
 
@@ -233,28 +251,6 @@ function createTable() {
     first.className = second.className = third.className = loserA.className = loserB.className =
     loserC.className = scorerA.className = scorerB.className = scorerC.className = scorerD.className =
     scorerE.className = "player"
-
-    let sortedPlayers = [ players.andre, players.junior, players.marcio ]
-    let losers = [ players.andre, players.junior, players.marcio ]
-    let sortedScorers = [ scorers.mbappe, scorers.haller, scorers.salah, scorers.sancho, scorers.vlahovic ]
-
-    sortedPlayers.sort( (a, b) => {
-        if(b.trophies !== a.trophies) {
-            return b.trophies - a.trophies
-        }
-    })
-
-    losers.sort( (a, b) => {
-        if(b.losers !== a.losers) {
-            return b.losers - a.losers
-        }
-    })
-
-    sortedScorers.sort( (a, b) => {
-        if(b.goals !== a.goals) {
-            return b.goals - a.goals
-        }
-    })
 
     first.innerHTML = createPlayerChampion(sortedPlayers[0], 1, "first")
     second.innerHTML = createPlayerChampion(sortedPlayers[1], 2, "second")
@@ -284,7 +280,6 @@ function createTable() {
     scorer?.append(scorerD)
     scorer?.append(scorerE)
 }
-
 
 // createTable()
 
