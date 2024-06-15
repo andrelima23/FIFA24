@@ -10,7 +10,7 @@ const players = {
     andre: {
         pic: "./src/images/andre.webp",
         name: "André",
-        trophies: 36,
+        trophies: 39,
         lastTrophies: 63,
         losers: 6,
         lastLosers: 18
@@ -20,7 +20,7 @@ const players = {
         name: "Márcio",
         trophies: 9,
         lastTrophies: 23,
-        losers: 21,
+        losers: 23,
         lastLosers: 42
     },
     junior: {
@@ -28,7 +28,7 @@ const players = {
         name: "Júnior",
         trophies: 7,
         lastTrophies: 25,
-        losers: 26,
+        losers: 27,
         lastLosers: 51
     },
 }
