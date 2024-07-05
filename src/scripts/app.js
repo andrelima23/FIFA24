@@ -10,25 +10,25 @@ const players = {
     andre: {
         pic: "./src/images/andre.webp",
         name: "André",
-        trophies: 41,
+        trophies: 44,
         lastTrophies: 63,
-        losers: 7,
+        losers: 8,
         lastLosers: 18
     },
     marcio: {
         pic: "./src/images/marcio.webp",
         name: "Márcio",
-        trophies: 9,
+        trophies: 11,
         lastTrophies: 23,
-        losers: 25,
+        losers: 27,
         lastLosers: 42
     },
     junior: {
         pic: "./src/images/junior.webp",
         name: "Júnior",
-        trophies: 8,
+        trophies: 9,
         lastTrophies: 25,
-        losers: 27,
+        losers: 29,
         lastLosers: 51
     },
 }
@@ -37,22 +37,22 @@ const scorers = {
     mbappe: {
         pic: 'https://fifastatic.fifaindex.com/FIFA24/players/231747.png',
         name: "Mbappé",
-        goals: 12
+        goals: 19
     }, 
     vlahovic: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/246430.png",
         name: "Vlahović",
-        goals: 6
+        goals: 11
     },
     salah: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/209331.png",
         name: "Salah",
-        goals: 5
+        goals: 6
     },
     haller: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/205693.png",
         name: "Haller",
-        goals: 5
+        goals: 8
     },
     sancho: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/233049.png",
@@ -62,7 +62,7 @@ const scorers = {
     kean: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/236610.png",
         name: "Kean",
-        goals: 6
+        goals: 8
     },
     diaz: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/241084.png",
