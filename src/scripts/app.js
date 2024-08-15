@@ -42,12 +42,12 @@ const scorers = {
     vlahovic: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/246430.png",
         name: "Vlahović",
-        goals: 13
+        goals: 14
     },
     salah: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/209331.png",
         name: "Salah",
-        goals: 7
+        goals: 9
     },
     haller: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/205693.png",
