@@ -10,23 +10,23 @@ const players = {
     andre: {
         pic: "./src/images/andre.webp",
         name: "André",
-        trophies: 69,
+        trophies: 70,
         lastTrophies: 63,
-        losers: 13,
+        losers: 14,
         lastLosers: 18
     },
     marcio: {
         pic: "./src/images/marcio.webp",
         name: "Márcio",
-        trophies: 19,
+        trophies: 20,
         lastTrophies: 23,
-        losers: 50,
+        losers: 52,
         lastLosers: 42
     },
     junior: {
         pic: "./src/images/junior.webp",
         name: "Júnior",
-        trophies: 17,
+        trophies: 18,
         lastTrophies: 25,
         losers: 42,
         lastLosers: 51
@@ -37,7 +37,7 @@ const scorers = {
     mbappe: {
         pic: 'https://fifastatic.fifaindex.com/FIFA24/players/231747.png',
         name: "Mbappé",
-        goals: 33
+        goals: 35
     }, 
     vlahovic: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/246430.png",
@@ -47,7 +47,7 @@ const scorers = {
     salah: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/209331.png",
         name: "Salah",
-        goals: 9
+        goals: 10
     },
     haller: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/205693.png",
