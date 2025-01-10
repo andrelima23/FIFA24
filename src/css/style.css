@@ -51,10 +51,15 @@ body {
 
 
 .table,
-.table2,
-.table3,
+.table2024,
+.table2023,
+.table-losers,
+.table-losers2024,
+.table-losers2023,
 .table4,
-.table5 {
+.table-scorers,
+.table-scorers2024,
+.table-scorers2023 {
     display: flex;
     height: 80%;
     width: 100%;

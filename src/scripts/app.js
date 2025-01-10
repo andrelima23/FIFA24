@@ -1,75 +1,24 @@
+import { players, scorers } from "./players.js"
+
 const playerTable = document.querySelector(".table")
-const playerTable2 = document.querySelector(".table2")
-const playerTable3 = document.querySelector(".table3")
+const playerTable2024 = document.querySelector(".table2024")
+const playerTable2023 = document.querySelector(".table2023")
+const loserTable = document.querySelector(".table-losers")
+const loserTable2024 = document.querySelector(".table-losers2024")
+const loserTable2023 = document.querySelector(".table-losers2023")
 const playerTable4 = document.querySelector(".table4")
-const playerTable5 = document.querySelector(".table5")
+const scorerTable = document.querySelector(".table-scorers")
+const scorerTable2024 = document.querySelector(".table-scorers2024")
 const scorer = document.querySelector(".table4")
 
-
-const players = {
-    andre: {
-        pic: "./src/images/andre.webp",
-        name: "André",
-        trophies: 75,
-        lastTrophies: 63,
-        losers: 15,
-        lastLosers: 18
-    },
-    marcio: {
-        pic: "./src/images/marcio.webp",
-        name: "Márcio",
-        trophies: 23,
-        lastTrophies: 23,
-        losers: 60,
-        lastLosers: 42
-    },
-    junior: {
-        pic: "./src/images/junior.webp",
-        name: "Júnior",
-        trophies: 22,
-        lastTrophies: 25,
-        losers: 45,
-        lastLosers: 51
-    },
-}
-
-const scorers = {
-    mbappe: {
-        pic: 'https://fifastatic.fifaindex.com/FIFA24/players/231747.png',
-        name: "Mbappé",
-        goals: 39
-    }, 
-    vlahovic: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/246430.png",
-        name: "Vlahović",
-        goals: 23
-    },
-    salah: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/209331.png",
-        name: "Salah",
-        goals: 13
-    },
-    haller: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/205693.png",
-        name: "Haller",
-        goals: 8
-    },
-    sancho: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/233049.png",
-        name: "Sancho",
-        goals: 2
-    },
-    kean: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/236610.png",
-        name: "Kean",
-        goals: 8
-    },
-    diaz: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/241084.png",
-        name: "Luis Díaz",
-        goals: 6
+const checkPlayers = () =>  {
+    if (!players || !players.andre || !players.junior || !players.marcio) {
+        console.error("Erro: A variável 'players' ou suas propriedades não estão definidas.");
+        return;
     }
 }
+
+console.log("--- linha inicial ")
 
 
 
@@ -83,13 +32,23 @@ function createPlayerChampion(player, position, id) {
             `
 }
 
-function createPlayerChampionLastCup(player, position, id) {
+function createPlayerChampion2024(player, position, id) {
 
     return `
             <h2 class="player-pos" id= ${id}>${position}</h2>
             <img class="player-pic" id= ${id} src="${player.pic}" alt="player" >
             <h2 class="player-name" id= ${id} >${player.name}</h2>
-            <h2 class="player-trophies" id= ${id} >${player.lastTrophies}</h2>
+            <h2 class="player-trophies" id= ${id} >${player.fifa2024.trophies}</h2>
+            `
+}
+
+function createPlayerChampion2023(player, position, id) {
+
+    return `
+            <h2 class="player-pos" id= ${id}>${position}</h2>
+            <img class="player-pic" id= ${id} src="${player.pic}" alt="player" >
+            <h2 class="player-name" id= ${id} >${player.name}</h2>
+            <h2 class="player-trophies" id= ${id} >${player.fifa2023.trophies}</h2>
             `
 }
 
@@ -103,13 +62,23 @@ function createPlayerLoser(player, position, id) {
             `
 }
 
-function createPlayerLastLoser(player, position, id) {
+function createPlayerLoser2024(player, position, id) {
 
     return `
             <h2 class="player-pos" id= ${id}>${position}</h2>
             <img class="player-pic" id= ${id} src="${player.pic}" alt="player" >
             <h2 class="player-name" id= ${id} >${player.name}</h2>
-            <h2 class="player-trophies" id= ${id} >${player.lastLosers}</h2>
+            <h2 class="player-trophies" id= ${id} >${player.fifa2024.losers}</h2>
+            `
+}
+
+function createPlayerLoser2023(player, position, id) {
+
+    return `
+            <h2 class="player-pos" id= ${id}>${position}</h2>
+            <img class="player-pic" id= ${id} src="${player.pic}" alt="player" >
+            <h2 class="player-name" id= ${id} >${player.name}</h2>
+            <h2 class="player-trophies" id= ${id} >${player.fifa2023.losers}</h2>
             `
 }
 
@@ -120,6 +89,26 @@ function createScorers(scorer, position, id) {
             <img class="player-pic" id= ${id} src="${scorer.pic}" alt="scorer" >
             <h2 class="player-name" id= ${id} >${scorer.name}</h2>
             <h2 class="player-trophies" id= ${id} >${scorer.goals}</h2>
+            `
+}
+
+function createScorers2024(scorer, position, id) {
+
+    return `
+            <h2 class="player-pos" id= ${id}>${position}</h2>
+            <img class="player-pic" id= ${id} src="${scorer.pic}" alt="scorer" >
+            <h2 class="player-name" id= ${id} >${scorer.name}</h2>
+            <h2 class="player-trophies" id= ${id} >${scorer.goals2024}</h2>
+            `
+}
+
+function createScorers2023(scorer, position, id) {
+
+    return `
+            <h2 class="player-pos" id= ${id}>${position}</h2>
+            <img class="player-pic" id= ${id} src="${scorer.pic}" alt="scorer" >
+            <h2 class="player-name" id= ${id} >${scorer.name}</h2>
+            <h2 class="player-trophies" id= ${id} >${scorer.goals2023}</h2>
             `
 }
 
@@ -144,12 +133,12 @@ function createChampionsTable() {
     })
 }
 
-function createLastChampionsTable() {
+function createChampionsTable2024() {
     let sortedPlayers = [ players.andre, players.junior, players.marcio ];
-
+  
     sortedPlayers.sort( (a, b) => {
-        if(b.lastTrophies !== a.lastTrophies) {
-            return b.lastTrophies - a.lastTrophies
+        if(b.fifa2024.trophies !== a.fifa2024.trophies) {
+            return b.fifa2024.trophies - a.fifa2024.trophies
         }
     })
 
@@ -159,8 +148,28 @@ function createLastChampionsTable() {
         let id = index == 0 ? "first" : index == 1 ? "second" : "third"
 
         div.className = "player"
-        div.innerHTML = createPlayerChampionLastCup(player, position, id)
-        playerTable2?.append(div)
+        div.innerHTML = createPlayerChampion2024(player, position, id)
+        playerTable2024?.append(div)
+    })
+}
+
+function createChampionsTable2023() {
+    let sortedPlayers = [ players.andre, players.junior, players.marcio ];
+  
+    sortedPlayers.sort( (a, b) => {
+        if(b.fifa2023.trophies !== a.fifa2023.trophies) {
+            return b.fifa2023.trophies - a.fifa2023.trophies
+        }
+    })
+
+    sortedPlayers.map( (player, index) => {
+        let div = document.createElement("div");
+        let position = index + 1;
+        let id = index == 0 ? "first" : index == 1 ? "second" : "third"
+
+        div.className = "player"
+        div.innerHTML = createPlayerChampion2023(player, position, id)
+        playerTable2023?.append(div)
     })
 }
 
@@ -180,11 +189,53 @@ function createLoserTable() {
 
         div.className = "player"
         div.innerHTML = createPlayerLoser(player, position, id)
-        playerTable3?.append(div)
+        loserTable?.append(div)
+    })
+}
+
+function createLoserTable2024() {
+    let sortedPlayers = [ players.andre, players.junior, players.marcio ];
+
+    sortedPlayers.sort( (a, b) => {
+        if(b.fifa2024.losers !== a.fifa2024.losers) {
+            return b.fifa2024.losers - a.fifa2024.losers
+        }
+    })
+
+    sortedPlayers.map( (player, index) => {
+        let div = document.createElement("div");
+        let position = index + 1;
+        let id = index == 0 ? "first" : index == 1 ? "second" : "third"
+
+        div.className = "player"
+        div.innerHTML = createPlayerLoser2024(player, position, id)
+        loserTable2024?.append(div)
+    })
+}
+
+function createLoserTable2023() {
+    let sortedPlayers = [ players.andre, players.junior, players.marcio ];
+
+    sortedPlayers.sort( (a, b) => {
+        if(b.fifa2023.losers !== a.fifa2023.losers) {
+            return b.fifa2023.losers - a.fifa2023.losers
+        }
+    })
+
+    sortedPlayers.map( (player, index) => {
+        let div = document.createElement("div");
+        let position = index + 1;
+        let id = index == 0 ? "first" : index == 1 ? "second" : "third"
+
+        div.className = "player"
+        div.innerHTML = createPlayerLoser2023(player, position, id)
+        loserTable2023?.append(div)
     })
 }
 
 function createLastLoserTable() {
+    checkPlayers()
+    
     let sortedPlayers = [ players.andre, players.junior, players.marcio ];
 
     sortedPlayers.sort( (a, b) => {
@@ -207,8 +258,11 @@ function createLastLoserTable() {
 function createScorerTable() {
     let keys = Object.keys(scorers)
     let sortedScorers = [];
-    for(key of keys) {
-        sortedScorers.push(scorers[key])
+    for(let key of keys) {
+        if(scorers[key].goals !== undefined) {
+            sortedScorers.push(scorers[key])
+
+        }
     }
     sortedScorers.sort( (a, b) => {
         if(b.goals !== a.goals) {
@@ -226,65 +280,53 @@ function createScorerTable() {
 
         div.className = "player"
         div.innerHTML = createScorers(player, position, id)
-        playerTable5?.append(div)
+        scorerTable?.append(div)
 
         
     })
 }
 
-function createTable() {
+function createScorerTable2024() {
+    let keys = Object.keys(scorers)
+    let sortedScorers = [];
+    for(let key of keys) {
+        if(scorers[key].goals2024 !== undefined) {
+            sortedScorers.push(scorers[key])
 
-    const first = document.createElement("div")
-    const second = document.createElement("div")
-    const third = document.createElement("div")
+        }
+    }
+    sortedScorers.sort( (a, b) => {
+        if(b.goals2024 !== a.goals2024) {
+            return b.goals2024 - a.goals2024
+        }
+    })
 
-    const loserA = document.createElement("div")
-    const loserB = document.createElement("div")
-    const loserC = document.createElement("div")
+    sortedScorers.map( (player, index) => {
+        if(index > 4) {
+            return
+        }
+        let div = document.createElement("div");
+        let position = index + 1;
+        let id = index == 0 ? "first" : "second" 
 
-    const scorerA = document.createElement("div")
-    const scorerB = document.createElement("div")
-    const scorerC = document.createElement("div")
-    const scorerD = document.createElement("div")
-    const scorerE = document.createElement("div")
+        div.className = "player"
+        div.innerHTML = createScorers2024(player, position, id)
+        scorerTable2024?.append(div)
 
-    first.className = second.className = third.className = loserA.className = loserB.className =
-    loserC.className = scorerA.className = scorerB.className = scorerC.className = scorerD.className =
-    scorerE.className = "player"
-
-    first.innerHTML = createPlayerChampion(sortedPlayers[0], 1, "first")
-    second.innerHTML = createPlayerChampion(sortedPlayers[1], 2, "second")
-    third.innerHTML = createPlayerChampion(sortedPlayers[2], 3, "third")
-
-    player?.append(first)
-    player?.append(second)
-    player?.append(third)
-
-    loserA.innerHTML = createPlayerLoser(losers[0], 1, "first")
-    loserB.innerHTML = createPlayerLoser(losers[1], 2, "second")
-    loserC.innerHTML = createPlayerLoser(losers[2], 3, "third")
-
-    player2?.append(loserA)
-    player2?.append(loserB)
-    player2?.append(loserC)
-
-    scorerA.innerHTML = createScorers(sortedScorers[0], 1, "first")
-    scorerB.innerHTML = createScorers(sortedScorers[1], 1, "first")
-    scorerC.innerHTML = createScorers(sortedScorers[2], 1, "first")
-    scorerD.innerHTML = createScorers(sortedScorers[3], 1, "first")
-    scorerE.innerHTML = createScorers(sortedScorers[4], 1, "first")
-
-    scorer?.append(scorerA)
-    scorer?.append(scorerB)
-    scorer?.append(scorerC)
-    scorer?.append(scorerD)
-    scorer?.append(scorerE)
+        
+    })
 }
 
-// createTable()
 
 createChampionsTable()
-createLastChampionsTable()
+createChampionsTable2024()
+createChampionsTable2023()
 createLoserTable()
-createLastLoserTable()
+createLoserTable2024()
+createLoserTable2023()
+// createLastLoserTable()
 createScorerTable()
+createScorerTable2024()
+createScorerTable2023()
+
+console.log("--- linha final ")
