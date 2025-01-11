@@ -52,7 +52,7 @@ export const scorers = {
     mbappe: {
         pic: 'https://fifastatic.fifaindex.com/FIFA24/players/231747.png',
         name: "Mbappé",
-        goals: 1,
+        goals: 2,
         goals2024: 39
     }, 
     vlahovic: {
