@@ -44,6 +44,11 @@ export const players = {
 }
 
 export const scorers = {
+    wood: {
+        pic: "https://fifastatic.fifaindex.com/FIFA24/players/192123.png",
+        name: "Wood",
+        goals: 1
+    },
     mbappe: {
         pic: 'https://fifastatic.fifaindex.com/FIFA24/players/231747.png',
         name: "Mbappé",
