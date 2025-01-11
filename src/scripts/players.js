@@ -3,9 +3,7 @@ export const players = {
         pic: "./src/images/andre.webp",
         name: "André",
         trophies: 1,
-        lastTrophies: 75,
-        losers: 0,
-        lastLosers: 15,
+        losers: 1,
         fifa2024: {
             trophies: 75,
             losers: 15
@@ -18,10 +16,8 @@ export const players = {
     marcio: {
         pic: "./src/images/marcio.webp",
         name: "Márcio",
-        trophies: 0,
-        lastTrophies: 23,
+        trophies: 1,
         losers: 2,
-        lastLosers: 60,
         fifa2024: {
             trophies: 23,
             losers: 60
@@ -34,10 +30,8 @@ export const players = {
     junior: {
         pic: "./src/images/junior.webp",
         name: "Júnior",
-        trophies: 1,
-        lastTrophies: 22,
-        losers: 0,
-        lastLosers: 45,
+        trophies: 2,
+        losers: 1,
         fifa2024: {
             trophies: 22,
             losers: 45
