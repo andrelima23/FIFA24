@@ -2,7 +2,7 @@ export const players = {
     andre: {
         pic: "./src/images/andre.webp",
         name: "André",
-        trophies: 6,
+        trophies: 8,
         losers: 1,
         fifa2024: {
             trophies: 75,
@@ -16,8 +16,8 @@ export const players = {
     marcio: {
         pic: "./src/images/marcio.webp",
         name: "Márcio",
-        trophies: 1,
-        losers: 6,
+        trophies: 2,
+        losers: 8,
         fifa2024: {
             trophies: 23,
             losers: 60
@@ -31,7 +31,7 @@ export const players = {
         pic: "./src/images/junior.webp",
         name: "Júnior",
         trophies: 4,
-        losers: 4,
+        losers: 5,
         fifa2024: {
             trophies: 22,
             losers: 45
@@ -52,18 +52,18 @@ export const scorers = {
     wood: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/192123.png",
         name: "Wood",
-        goals: 1
+        goals: 2
     },
     mbappe: {
         pic: 'https://fifastatic.fifaindex.com/FIFA24/players/231747.png',
         name: "Mbappé",
-        goals: 3,
+        goals: 4,
         goals2024: 39
     }, 
     vlahovic: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/246430.png",
         name: "Vlahović",
-        goals: 1,
+        goals: 2,
         goals2024: 23
     },
     salah: {
