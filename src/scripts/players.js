@@ -44,6 +44,16 @@ export const players = {
 }
 
 export const scorers = {
+    Asensio: {
+        pic: "https://cdn.sofifa.net/players/220/834/25_270.png",
+        name: "Asensio",
+        goals: 1
+    },
+    Watkins: {
+        pic: "https://cdn.sofifa.net/players/221/697/25_270.png,
+        name: "Watkins",
+        goals: 1
+    },
     guirassy: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/215441.png",
         name: "Guirassy",
@@ -61,13 +71,13 @@ export const scorers = {
         goals2024: 39
     }, 
     vlahovic: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/246430.png",
+        pic: "https://cdn.sofifa.net/players/246/430/25_270.png",
         name: "Vlahović",
         goals: 3,
         goals2024: 23
     },
     salah: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/209331.png",
+        pic: "https://cdn.sofifa.net/players/209/331/25_270.png",
         name: "Salah",
         goals: 6,
         goals2024: 13
