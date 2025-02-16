@@ -50,7 +50,7 @@ export const scorers = {
         goals: 1
     },
     watkins: {
-        pic: "https://cdn.sofifa.net/players/221/697/25_270.png,
+        pic: "https://cdn.sofifa.net/players/221/697/25_270.png",
         name: "Watkins",
         goals: 1
     },
