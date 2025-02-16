@@ -44,12 +44,12 @@ export const players = {
 }
 
 export const scorers = {
-    Asensio: {
+    asensio: {
         pic: "https://cdn.sofifa.net/players/220/834/25_270.png",
         name: "Asensio",
         goals: 1
     },
-    Watkins: {
+    watkins: {
         pic: "https://cdn.sofifa.net/players/221/697/25_270.png,
         name: "Watkins",
         goals: 1
