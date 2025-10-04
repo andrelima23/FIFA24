@@ -83,7 +83,7 @@ export const scorers = {
         goals2024: 13
     },
     isak: {
-        pic: "https://cdn.sofifa.net/players/233/731/26_120.png",
+        pic: "https://www.fifaratings.com/wp-content/uploads/alexander-isak-fc-rating-300x300.png",
         name: "Isak",
         goals: 4,
     },
