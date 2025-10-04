@@ -71,19 +71,19 @@ export const scorers = {
         goals2024: 39
     }, 
     vlahovic: {
-        pic: "https://cdn.sofifa.net/players/246/430/25_270.png",
+        pic: "https://fifastatic.fifaindex.com/FIFA24/players/246430.png",
         name: "Vlahović",
         goals: 12,
         goals2024: 23
     },
     salah: {
-        pic: "https://cdn.sofifa.net/players/209/331/25_270.png",
+        pic: "https://fifastatic.fifaindex.com/FIFA24/players/209331.png",
         name: "Salah",
         goals: 24,
         goals2024: 13
     },
     isak: {
-        pic: "https://www.fifaratings.com/wp-content/uploads/alexander-isak-fc-rating-300x300.png",
+        pic: "https://fifastatic.fifaindex.com/FIFA24/players/233731.png",
         name: "Isak",
         goals: 4,
     },
