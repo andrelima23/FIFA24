@@ -3,7 +3,7 @@ export const players = {
         pic: "./src/images/andre.webp",
         name: "André",
         fifa2026: {
-            trophies: 5,
+            trophies: 6,
             losers: 1
         },
 
@@ -26,7 +26,7 @@ export const players = {
         name: "Márcio",
         fifa2026: {
             trophies: 1,
-            losers: 4
+            losers: 6
         },
         
         // Anos anteriores
@@ -47,7 +47,7 @@ export const players = {
         pic: "./src/images/junior.webp",
         name: "Júnior",
         fifa2026: {
-            trophies: 0,
+            trophies: 1,
             losers: 1
         },
         
@@ -72,7 +72,7 @@ export const scorers = {
     mbappe: {
         pic: 'https://fifastatic.fifaindex.com/FIFA24/players/231747.png',
         name: "Mbappé",
-        goals: 3,
+        goals: 4,
         goals2025: 36,
         goals2024: 39
     },
@@ -104,7 +104,7 @@ export const scorers = {
     ekitike: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/257289.png",
         name: "Ekitike",
-        goals: 3,
+        goals: 4,
     },
 
     // Artilheiros 2025
