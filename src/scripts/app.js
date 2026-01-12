@@ -34,27 +34,7 @@ function createScorers(scorer, position, id, year) {
             `
 }
 
-function createChampionsTable(year) {
-    let sortedPlayers = [ players.andre, players.junior, players.marcio ];
-    const statsKey = year ? `fifa${year}` : 'fifa2026';
-  
-    sortedPlayers.sort((a, b) => {
-        return b[statsKey].trophies - a[statsKey].trophies;
-    });
 
-    const selector = year ? `.table${year}` : '.table';
-    const tableSelector = document.querySelector(selector);
-
-    sortedPlayers.map( (player, index) => {
-        let div = document.createElement("div");
-        let position = index + 1;
-        let id = index == 0 ? "first" : index == 1 ? "second" : "third"
-
-        div.className = "player"
-        div.innerHTML = createPlayerChampion(player, position, id, year)
-        tableSelector?.append(div)
-    })
-}
 
 function createLosersTable(year) {
     let sortedPlayers = [ players.andre, players.junior, players.marcio ];
@@ -77,6 +57,43 @@ function createLosersTable(year) {
         tableSelector?.append(div)
     })
 }
+
+function createChampionsTable(year) {
+    let sortedPlayers = [ players.andre, players.junior, players.marcio ];
+    const statsKey = year ? `fifa${year}` : 'fifa2026';
+
+    sortedPlayers.sort((a, b) => b[statsKey].trophies - a[statsKey].trophies);
+
+    const selector = year ? `.table${year}` : '.table';
+    const tableSelector = document.querySelector(selector);
+
+    // Variáveis para controlar o empate
+    let currentPosition = 0;
+    let lastTrophies = -1;
+
+    sortedPlayers.map((player, index) => {
+        const trophies = player[statsKey].trophies;
+
+        // Se o número de troféus for diferente do anterior, atualiza a posição
+        // Caso contrário, mantém a mesma (empate)
+        if (trophies !== lastTrophies) {
+            currentPosition = index + 1;
+        }
+        
+        lastTrophies = trophies; // Atualiza para a próxima comparação
+
+        let div = document.createElement("div");
+        
+        // Mantemos o ID baseado no índice real para manter as cores/estilos (ouro, prata, bronze)
+        let id = index == 0 ? "first" : index == 1 ? "second" : "third";
+
+        div.className = "player";
+        // Passamos 'currentPosition' em vez de 'index + 1'
+        div.innerHTML = createPlayerChampion(player, currentPosition, id, year);
+        tableSelector?.append(div);
+    });
+}
+
 
 function createScorersTable(year) {
     let keys = Object.keys(scorers)
