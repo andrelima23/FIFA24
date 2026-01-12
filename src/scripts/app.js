@@ -84,8 +84,14 @@ function createChampionsTable(year) {
 
         let div = document.createElement("div");
         
-        // Mantemos o ID baseado no índice real para manter as cores/estilos (ouro, prata, bronze)
-        let id = index == 0 ? "first" : index == 1 ? "second" : "third";
+         let id = "";
+    if (currentPosition === 1) {
+        id = "first";
+    } else if (currentPosition === 2) {
+        id = "second";
+    } else {
+        id = "third";
+    }
 
         div.className = "player";
         // Passamos 'currentPosition' em vez de 'index + 1'
