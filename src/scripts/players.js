@@ -47,7 +47,7 @@ export const players = {
         pic: "./src/images/junior.webp",
         name: "Júnior",
         fifa2026: {
-            trophies: 6,
+            trophies: 1,
             losers: 1
         },
         
