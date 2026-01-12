@@ -40,23 +40,33 @@ function createLosersTable(year) {
     let sortedPlayers = [ players.andre, players.junior, players.marcio ];
     const statsKey = year ? `fifa${year}` : 'fifa2026';
 
-    sortedPlayers.sort((a, b) => {
-        return b[statsKey].losers - a[statsKey].losers;
-    });
+    sortedPlayers.sort((a, b) => b[statsKey].losers - a[statsKey].losers);
 
     const selector = year ? `.table-losers${year}` : '.table-losers';
     const tableSelector = document.querySelector(selector);
 
-    sortedPlayers.map( (player, index) => {
-        let div = document.createElement("div");
-        let position = index + 1;
-        let id = index == 0 ? "first" : index == 1 ? "second" : "third"
+    let currentPosition = 0;
+    let lastLosers = -1;
 
-        div.className = "player"
-        div.innerHTML = createPlayerLoser(player, position, id, year)
-        tableSelector?.append(div)
-    })
+    sortedPlayers.map((player, index) => {
+        const losersCount = player[statsKey].losers;
+
+        if (losersCount !== lastLosers) {
+            currentPosition = index + 1;
+        }
+        lastLosers = losersCount;
+
+        let div = document.createElement("div");
+        div.className = "player";
+
+        // Define ID baseado na posição para manter as cores de destaque
+        let id = currentPosition === 1 ? "first" : currentPosition === 2 ? "second" : "third";
+
+        div.innerHTML = createPlayerLoser(player, currentPosition, id, year);
+        tableSelector?.append(div);
+    });
 }
+
 
 function createChampionsTable(year) {
     let sortedPlayers = [ players.andre, players.junior, players.marcio ];
@@ -84,14 +94,7 @@ function createChampionsTable(year) {
 
         let div = document.createElement("div");
         
-         let id = "";
-    if (currentPosition === 1) {
-        id = "first";
-    } else if (currentPosition === 2) {
-        id = "second";
-    } else {
-        id = "third";
-    }
+         let id = currentPosition === 1 ? "first" : currentPosition === 2 ? "second" : "third";
 
         div.className = "player";
         // Passamos 'currentPosition' em vez de 'index + 1'
@@ -102,7 +105,7 @@ function createChampionsTable(year) {
 
 
 function createScorersTable(year) {
-    let keys = Object.keys(scorers)
+    let keys = Object.keys(scorers);
     let sortedScorers = [];
     const statsKey = year ? `goals${year}` : 'goals';
 
@@ -112,30 +115,33 @@ function createScorersTable(year) {
         }
     }
 
-
-
-    sortedScorers.sort( (a, b) => {
-            return b[statsKey] - a[statsKey]
-    })
-
-        console.log("Sorted Scorers before sort:", sortedScorers);
+    sortedScorers.sort((a, b) => b[statsKey] - a[statsKey]);
 
     const selector = year ? `.table-scorers${year}` : '.table-scorers';
     const tableSelector = document.querySelector(selector);
 
+    let currentPosition = 0;
+    let lastGoals = -1;
 
-    sortedScorers.map( (player, index) => {
-        if(index > 4) {
-            return
+    sortedScorers.map((player, index) => {
+        if(index > 4) return; // Mantém o limite de Top 5
+
+        const goalsCount = player[statsKey];
+
+        if (goalsCount !== lastGoals) {
+            currentPosition = index + 1;
         }
-        let div = document.createElement("div");
-        let position = index + 1;
-        let id = index == 0 ? "first" : "second" 
+        lastGoals = goalsCount;
 
-        div.className = "player"
-        div.innerHTML = createScorers(player, position, id, year)
-        tableSelector?.append(div)
-    })
+        let div = document.createElement("div");
+        div.className = "player";
+
+        // Para artilheiros, geralmente apenas o 1º ganha destaque especial
+        let id = currentPosition === 1 ? "first" : "second"; 
+
+        div.innerHTML = createScorers(player, currentPosition, id, year);
+        tableSelector?.append(div);
+    });
 }
 
 
