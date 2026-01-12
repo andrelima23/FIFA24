@@ -60,7 +60,7 @@ function createLosersTable(year) {
         div.className = "player";
 
         // Define ID baseado na posição para manter as cores de destaque
-        let id = currentPosition === 1 ? "first" : currentPosition === 2 ? "second" : "third";
+        let id = currentPosition === 3 ? "first" : currentPosition === 2 ? "second" : "third";
 
         div.innerHTML = createPlayerLoser(player, currentPosition, id, year);
         tableSelector?.append(div);
