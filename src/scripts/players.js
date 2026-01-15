@@ -3,7 +3,7 @@ export const players = {
         pic: "./src/images/andre.webp",
         name: "André",
         fifa2026: {
-            trophies: 8,
+            trophies: 10,
             losers: 1
         },
 
@@ -26,7 +26,7 @@ export const players = {
         name: "Márcio",
         fifa2026: {
             trophies: 1,
-            losers: 6
+            losers: 8
         },
         
         // Anos anteriores
@@ -98,7 +98,7 @@ export const scorers = {
     isak: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/233731.png",
         name: "Isak",
-        goals: 1,
+        goals: 3,
         goals2025: 6,
     },
     ekitike: {
