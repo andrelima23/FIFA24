@@ -70,45 +70,45 @@ export const players = {
 export const scorers = {
     // Artilheiros 2026
     mbappe: {
-        pic: 'https://fifastatic.fifaindex.com/FIFA24/players/231747.png',
+        pic: 'https://cdn.fifacm.com/content/media/imgs/fc26/players/p231747.png?v=26',
         name: "Mbappé",
         goals: 5,
         goals2025: 36,
         goals2024: 39
     },
     vini: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/238794.png",
+        pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p238794.png?v=26",
         name: "Vinícius Jr.",
         goals: 2
     },
     vlahovic: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/246430.png",
+        pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p246430.png?v=26",
         name: "Vlahović",
         goals: 1,
         goals2025: 14,
         goals2024: 23
     },
     salah: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/209331.png",
+        pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p209331.png?v=26",
         name: "Salah",
         goals: 0,
         goals2025: 24,
         goals2024: 13
     },
     isak: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/233731.png",
+        pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p233731.png?v=26",
         name: "Isak",
         goals: 3,
         goals2025: 3,
     },
     ekitike: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/257289.png",
+        pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p257289.png?v=26",
         name: "Ekitike",
         goals: 7,
     },
 
     openda: {
-        pic: "https://fifastatic.fifaindex.com/FIFA24/players/243580.png",
+        pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p243580.png?v=26",
         name: "Openda",
         goals: 1,
      },
