@@ -124,7 +124,7 @@ function createScorersTable(year) {
     let lastGoals = -1;
 
     sortedScorers.map((player, index) => {
-        if(index > 4) return; // Mantém o limite de Top 5
+        if(index > 7) return; // Mantém o limite de Top 8
 
         const goalsCount = player[statsKey];
 
