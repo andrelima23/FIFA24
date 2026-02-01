@@ -108,13 +108,13 @@ export const scorers = {
     },
 
     openda: {
-        pic: "https://cdn3.futbin.com/content/fifa26/img/players/243580.png",
+        pic: "https://cdn.sofifa.net/players/243/580/26_270.png",
         name: "Openda",
         goals: 1,
      },
 
      palacios: {
-        pic: "https://cdn3.futbin.com/content/fifa26/img/players/242971.png",
+        pic: "https://cdn.sofifa.net/players/242/971/26_270.png",
         name: "Palácios",
         goals: 1,
      },
