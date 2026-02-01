@@ -111,13 +111,13 @@ export const scorers = {
         pic: "https://cdn3.futbin.com/content/fifa26/img/players/243580.png",
         name: "Openda",
         goals: 1,
-     }
+     },
 
      palacios: {
         pic: "https://cdn3.futbin.com/content/fifa26/img/players/242971.png",
         name: "Palácios",
         goals: 1,
-     }
+     },
 
     // Artilheiros 2025
     asensio: {
