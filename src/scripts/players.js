@@ -3,7 +3,7 @@ export const players = {
         pic: "./src/images/andre.webp",
         name: "André",
         fifa2026: {
-            trophies: 10,
+            trophies: 12,
             losers: 1
         },
 
@@ -25,8 +25,8 @@ export const players = {
         pic: "./src/images/marcio.webp",
         name: "Márcio",
         fifa2026: {
-            trophies: 1,
-            losers: 8
+            trophies: 2,
+            losers: 10
         },
         
         // Anos anteriores
@@ -48,7 +48,7 @@ export const players = {
         name: "Júnior",
         fifa2026: {
             trophies: 1,
-            losers: 3
+            losers: 4
         },
         
         // Anos anteriores
@@ -99,13 +99,25 @@ export const scorers = {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/233731.png",
         name: "Isak",
         goals: 3,
-        goals2025: 6,
+        goals2025: 3,
     },
     ekitike: {
         pic: "https://fifastatic.fifaindex.com/FIFA24/players/257289.png",
         name: "Ekitike",
-        goals: 6,
+        goals: 7,
     },
+
+    openda: {
+        pic: "https://cdn3.futbin.com/content/fifa26/img/players/243580.png",
+        name: "Openda",
+        goals: 1,
+     }
+
+     palacios: {
+        pic: "https://cdn3.futbin.com/content/fifa26/img/players/242971.png",
+        name: "Palácios",
+        goals: 1,
+     }
 
     // Artilheiros 2025
     asensio: {
