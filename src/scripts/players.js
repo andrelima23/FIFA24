@@ -97,9 +97,8 @@ export const scorers = {
     },
     merentiel: {
         pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p240663.png?v=26",
-        name: "Miguel
-Ángel Merentiel",
-        goals: 2
+        name: "Miguel Ángel Merentiel",
+        goals: 2,
     },
     isak: {
         pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p233731.png?v=26",
