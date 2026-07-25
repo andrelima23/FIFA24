@@ -25,7 +25,7 @@ export const players = {
         pic: "./src/images/marcio.webp",
         name: "Márcio",
         fifa2026: {
-            trophies: 3,
+            trophies: 4,
             losers: 25
         },
         
@@ -72,7 +72,7 @@ export const scorers = {
     mbappe: {
         pic: 'https://cdn.fifacm.com/content/media/imgs/fc26/players/p231747.png?v=26',
         name: "Mbappé",
-        goals: 10,
+        goals: 11,
         goals2025: 36,
         goals2024: 39
     },
