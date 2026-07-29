@@ -26,7 +26,7 @@ export const players = {
         name: "Márcio",
         fifa2026: {
             trophies: 4,
-            losers: 25
+            losers: 26
         },
         
         // Anos anteriores
@@ -47,7 +47,7 @@ export const players = {
         pic: "./src/images/junior.webp",
         name: "Júnior",
         fifa2026: {
-            trophies: 4,
+            trophies: 5,
             losers: 9
         },
         
@@ -98,7 +98,7 @@ export const scorers = {
     merentiel: {
         pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p240663.png?v=26",
         name: "Merentiel",
-        goals: 2,
+        goals: 3,
     },
     isak: {
         pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p233731.png?v=26",
