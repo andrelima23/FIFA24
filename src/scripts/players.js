@@ -3,7 +3,7 @@ export const players = {
         pic: "./src/images/andre.webp",
         name: "André",
         fifa2026: {
-            trophies: 29,
+            trophies: 32,
             losers: 2
         },
 
@@ -26,7 +26,7 @@ export const players = {
         name: "Márcio",
         fifa2026: {
             trophies: 4,
-            losers: 26
+            losers: 28
         },
         
         // Anos anteriores
@@ -48,7 +48,7 @@ export const players = {
         name: "Júnior",
         fifa2026: {
             trophies: 5,
-            losers: 9
+            losers: 10
         },
         
         // Anos anteriores
@@ -72,7 +72,7 @@ export const scorers = {
     mbappe: {
         pic: 'https://cdn.fifacm.com/content/media/imgs/fc26/players/p231747.png?v=26',
         name: "Mbappé",
-        goals: 11,
+        goals: 12,
         goals2025: 36,
         goals2024: 39
     },
@@ -103,13 +103,13 @@ export const scorers = {
     isak: {
         pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p233731.png?v=26",
         name: "Isak",
-        goals: 12,
+        goals: 13,
         goals2025: 3,
     },
     ekitike: {
         pic: "https://cdn.fifacm.com/content/media/imgs/fc26/players/p257289.png?v=26",
         name: "Ekitike",
-        goals: 13,
+        goals: 14,
     },
 
     openda: {
